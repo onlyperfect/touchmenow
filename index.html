@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Private Access • Verified Profiles Nearby</title>
+<title>Private Adult Area • Verified Women Only</title>
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-02ZN82S10H"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -14,90 +13,76 @@ gtag('js', new Date());
 gtag('config', 'G-02ZN82S10H');
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{
-background:#0b0b0f url('https://raw.githubusercontent.com/luciaadrianex/hooareyou/main/fotos/hooarey.jpeg') no-repeat center/cover;
-min-height:100vh;display:flex;align-items:center;justify-content:center;
-color:#fff;
+background:#000 url('https://raw.githubusercontent.com/luciaadrianex/hooareyou/main/fotos/hooarey.jpeg') no-repeat center/cover;
+min-height:100vh;display:flex;align-items:center;justify-content:center;color:#fff;
 }
-.overlay{
-background:rgba(0,0,0,.75);
-backdrop-filter:blur(12px);
-padding:30px;
-border-radius:18px;
+.card{
+background:rgba(0,0,0,.82);
+backdrop-filter:blur(14px);
+padding:35px;
+border-radius:20px;
 max-width:420px;
 width:100%;
-box-shadow:0 0 40px rgba(255,0,90,.45);
+box-shadow:0 0 45px rgba(255,0,80,.6);
 text-align:center;
 animation:fade .8s ease;
+border:1px solid rgba(255,0,80,.3);
 }
-@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(25px)}to{opacity:1}}
 
 .badge{
-background:#ff3366;
-padding:6px 14px;
-border-radius:30px;
+background:#ff0033;
+padding:7px 16px;
+border-radius:50px;
 font-size:.75rem;
-font-weight:700;
+font-weight:800;
+letter-spacing:.5px;
+margin-bottom:18px;
 display:inline-block;
-margin-bottom:15px;
 }
 
 h1{
-font-size:1.9rem;
+font-size:2rem;
 font-weight:800;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 p{
 font-size:1rem;
 opacity:.9;
-margin-bottom:20px;
+margin-bottom:22px;
 }
 
-.progress{
-height:8px;
-background:#222;
-border-radius:20px;
-overflow:hidden;
-margin:20px 0;
-}
-.progress span{
-display:block;
-height:100%;
-width:0%;
-background:linear-gradient(90deg,#ff3366,#ff7a00);
-animation:load 2s forwards;
-}
-@keyframes load{to{width:100%}}
-
-.step{
-font-size:.9rem;
-margin-bottom:20px;
-color:#ffeb3b;
+.alert{
+color:#ffcc00;
+font-size:.85rem;
+margin-bottom:18px;
+font-weight:600;
 }
 
 button{
 width:100%;
 border:none;
-padding:16px;
-border-radius:50px;
+padding:18px;
+border-radius:60px;
 font-size:1.2rem;
-font-weight:700;
-background:linear-gradient(45deg,#ff3366,#ff7a00);
+font-weight:800;
+background:linear-gradient(45deg,#ff0033,#ff7a00);
 color:#fff;
 cursor:pointer;
-box-shadow:0 10px 25px rgba(255,51,102,.6);
+box-shadow:0 10px 25px rgba(255,0,80,.7);
 transition:.3s;
 }
-button:hover{transform:scale(1.04)}
+button:hover{transform:scale(1.05)}
 
 .small{
-font-size:.75rem;
-opacity:.7;
+font-size:.7rem;
+opacity:.65;
 margin-top:15px;
 }
 </style>
@@ -105,35 +90,35 @@ margin-top:15px;
 
 <body>
 
-<div class="overlay" id="page1">
-    <div class="badge">🔒 Private Network</div>
-    <h1>Women Near You Are Online Now</h1>
-    <p>Only verified profiles are allowed inside.  
-    Please confirm your access.</p>
+<div class="card" id="step1">
+    <div class="badge">🔞 ADULT ZONE</div>
 
-    <div class="progress"><span></span></div>
-    <div class="step">Checking available profiles…</div>
+    <h1>Single Women Want Private Chats Tonight</h1>
+    <p>They are online right now looking for discreet fun and real connections.</p>
 
-    <button onclick="next()">Continue</button>
-    <div class="small">+18 • Discrete • No spam</div>
+    <div class="alert">⚠️ You must confirm you're over 18</div>
+
+    <button onclick="go()">Yes, I’m 18+</button>
+    <div class="small">No fake profiles • No bots • Discreet access</div>
 </div>
 
-<div class="overlay" id="page2" style="display:none">
-    <div class="badge">✅ Access Approved</div>
-    <h1>Your Matches Are Waiting</h1>
-    <p>Create your free account to unlock chats and photos.</p>
+<div class="card" id="step2" style="display:none">
+    <div class="badge">🔥 ACCESS UNLOCKED</div>
+
+    <h1>Last Step to Enter</h1>
+    <p>Create your free account to see photos and start chatting immediately.</p>
 
     <a href="https://bggceig.datesstor.com/s/ea626a068933d">
-        <button>Unlock My Free Account</button>
+        <button>Enter Private Area</button>
     </a>
 
     <div class="small">⚠️ Email confirmation required</div>
 </div>
 
 <script>
-function next(){
-document.getElementById("page1").style.display="none";
-document.getElementById("page2").style.display="block";
+function go(){
+document.getElementById('step1').style.display='none';
+document.getElementById('step2').style.display='block';
 }
 </script>
 
