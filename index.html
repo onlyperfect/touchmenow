@@ -1,225 +1,141 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exclusive Access: Verified Profiles Are Waiting! 🚀</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Access • Verified Profiles Nearby</title>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02ZN82S10H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-02ZN82S10H');
-    </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02ZN82S10H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-02ZN82S10H');
+</script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #ff3366; /* Vibrant Pink */
-            --secondary-color: #ffcc00; /* Golden Yellow */
-            --dark-bg: rgba(0, 0, 0, 0.7); /* Darker, more opaque background */
-            --text-light: #f0f0f0;
-            --text-accent: #ffeb3b; /* For highlights */
-            --button-gradient-start: #ff3366;
-            --button-gradient-end: #ff6600;
-            --container-shadow: rgba(255, 0, 85, 0.6);
-            --blur-strength: 15px;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{
+background:#0b0b0f url('https://raw.githubusercontent.com/luciaadrianex/hooareyou/main/fotos/hooarey.jpeg') no-repeat center/cover;
+min-height:100vh;display:flex;align-items:center;justify-content:center;
+color:#fff;
+}
+.overlay{
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:18px;
+max-width:420px;
+width:100%;
+box-shadow:0 0 40px rgba(255,0,90,.45);
+text-align:center;
+animation:fade .8s ease;
+}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.badge{
+background:#ff3366;
+padding:6px 14px;
+border-radius:30px;
+font-size:.75rem;
+font-weight:700;
+display:inline-block;
+margin-bottom:15px;
+}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-                        url('https://raw.githubusercontent.com/luciaadrianex/touchmenow/refs/heads/main/fotos/touchmenow01.jpeg') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            overflow: hidden; /* Prevent unnecessary scroll */
-        }
+h1{
+font-size:1.9rem;
+font-weight:800;
+margin-bottom:10px;
+}
 
-        .container {
-            max-width: 500px; /* Slightly more compact */
-            background: var(--dark-bg);
-            backdrop-filter: blur(var(--blur-strength));
-            -webkit-backdrop-filter: blur(var(--blur-strength));
-            padding: 35px;
-            border-radius: 15px; /* Slightly softer borders */
-            box-shadow: 0 0 35px var(--container-shadow);
-            border: 1px solid rgba(255, 51, 102, 0.3); /* Subtle border */
-            transform: translateY(0);
-            animation: fadeInScale 0.8s ease-out forwards; /* Entry animation */
-        }
+p{
+font-size:1rem;
+opacity:.9;
+margin-bottom:20px;
+}
 
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: translateY(20px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+.progress{
+height:8px;
+background:#222;
+border-radius:20px;
+overflow:hidden;
+margin:20px 0;
+}
+.progress span{
+display:block;
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#ff3366,#ff7a00);
+animation:load 2s forwards;
+}
+@keyframes load{to{width:100%}}
 
-        h1 {
-            font-size: 2.2rem; /* Slightly larger */
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            text-transform: uppercase; /* For more impact */
-            letter-spacing: 1px;
-            font-weight: 800; /* Bolder */
-        }
+.step{
+font-size:.9rem;
+margin-bottom:20px;
+color:#ffeb3b;
+}
 
-        .headline {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            color: var(--text-light); /* More visible */
-            line-height: 1.4;
-            font-weight: 500;
-        }
+button{
+width:100%;
+border:none;
+padding:16px;
+border-radius:50px;
+font-size:1.2rem;
+font-weight:700;
+background:linear-gradient(45deg,#ff3366,#ff7a00);
+color:#fff;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(255,51,102,.6);
+transition:.3s;
+}
+button:hover{transform:scale(1.04)}
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end));
-            color: #fff;
-            padding: 18px 38px; /* Larger button */
-            font-size: 1.3rem; /* Larger button text */
-            font-weight: 700;
-            border: none;
-            border-radius: 60px; /* More rounded */
-            text-decoration: none;
-            box-shadow: 0 10px 25px rgba(255, 51, 102, 0.6); /* More intense shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1); /* Smoother animation */
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            transition: all 0.4s ease;
-            transform: skewX(-20deg);
-            z-index: -1;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.02); /* Slight lift and scale */
-            box-shadow: 0 15px 30px rgba(255, 51, 102, 0.8);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); box-shadow: 0 12px 28px rgba(255, 51, 102, 0.7); }
-            100% { transform: scale(1); }
-        }
-
-        .confirmation {
-            margin-top: 25px; /* More spacing */
-            font-size: 0.95rem;
-            color: var(--text-accent); /* More vibrant yellow for alert */
-            font-weight: 700;
-            padding: 8px;
-            border-radius: 5px;
-            background-color: rgba(255, 204, 0, 0.1); /* Subtle background for alert */
-        }
-
-        .features {
-            margin-top: 30px; /* More spacing */
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            list-style: none; /* Remove default bullet points */
-            padding: 0;
-        }
-
-        .features li {
-            position: relative;
-            padding-left: 25px; /* Space for custom icon */
-            margin-bottom: 8px;
-        }
-
-        .features li::before {
-            content: '✓'; /* Checkmark icon */
-            color: var(--secondary-color); /* Icon color */
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            .headline {
-                font-size: 1rem;
-            }
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 1.1rem;
-            }
-            .container {
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.6rem;
-            }
-            .headline {
-                font-size: 0.95rem;
-            }
-            .cta-button {
-                padding: 12px 25px;
-                font-size: 1rem;
-            }
-            .container {
-                padding: 25px;
-            }
-        }
-    </style>
+.small{
+font-size:.75rem;
+opacity:.7;
+margin-top:15px;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>🔐 Your Exclusive Access to Real Profiles!</h1>
-        <div class="headline">Connect with verified women for genuine chats and authentic dates. Your next match is just a click away!</div>
-        <a href="https://bggceig.pixdates.com/s/ea626a068933d" class="cta-button">Create Your Free Account Now</a>
-        <div class="confirmation">⚠️ Registration required — please confirm your email to activate your profile!</div>
-        <ul class="features">
-            <li>100% real profiles, no bots.</li>
-            <li>Secure and private system for your peace of mind.</li>
-            <li>Fast sign-up, instant access to matches.</li>
-        </ul>
-    </div>
+
+<div class="overlay" id="page1">
+    <div class="badge">🔒 Private Network</div>
+    <h1>Women Near You Are Online Now</h1>
+    <p>Only verified profiles are allowed inside.  
+    Please confirm your access.</p>
+
+    <div class="progress"><span></span></div>
+    <div class="step">Checking available profiles…</div>
+
+    <button onclick="next()">Continue</button>
+    <div class="small">+18 • Discrete • No spam</div>
+</div>
+
+<div class="overlay" id="page2" style="display:none">
+    <div class="badge">✅ Access Approved</div>
+    <h1>Your Matches Are Waiting</h1>
+    <p>Create your free account to unlock chats and photos.</p>
+
+    <a href="https://bggceig.datesstor.com/s/ea626a068933d">
+        <button>Unlock My Free Account</button>
+    </a>
+
+    <div class="small">⚠️ Email confirmation required</div>
+</div>
+
+<script>
+function next(){
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="block";
+}
+</script>
+
 </body>
 </html>
-
-
-
